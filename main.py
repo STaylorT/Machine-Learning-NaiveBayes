@@ -141,10 +141,18 @@ non_spam_dict = dict(zip(non_spam_vocab, non_spam_freq))
 # run test data through and calculate accuracy
 test_metrics = test_function(test_data)
 accuracy = (test_metrics[0] + test_metrics[3]) / (sum(test_metrics)) * 100
+precision = test_metrics[0] / (test_metrics[0] + test_metrics[1] )
+recall = test_metrics[0] / (test_metrics[0] + test_metrics[2])
+f1_score = (2 * (recall * precision))/(precision + recall)
 print("Accuracy of test data from 'spam-data.txt': %.2f%%  " % accuracy)
+print("Precision of test data from 'spam-data.txt': %.2f%%  " % (precision*100))
+print("Recall of test data from 'spam-data.txt': %.2f%%  " % (recall*100))
+print("F1_Score of test data from 'spam-data.txt': %.2f  " % f1_score)
+
+
 
 user_input = "yes"
-while user_input.lower() != "no" and user_input.lower() == "n":
+while user_input.lower() != "no" and user_input.lower() != "n" and user_input.lower() != "q":
     # Ask user
     user_input = input("Would you like to enter a single SMS or email for the program to predict? (y/n): ")
     single_input = ""
