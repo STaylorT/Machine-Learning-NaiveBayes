@@ -175,4 +175,4 @@ print('Scores: %s' % scores)
 print('Mean Accuracy: %.3f%%' % (sum(scores)/float(len(scores))))
 
 
-summarize_dataset(dataset)
+# summarize_dataset(dataset)
