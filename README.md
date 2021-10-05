@@ -15,8 +15,10 @@ main.py takes in "spam-text.txt" and utilizes the examples contained in the file
 
 ** Program **
 1) the program begins by splitting the data contained in "spam-text.txt" into training and testing datasets, then performs its calculations and outputs the accuracy obtained by the test data
-2) the program then asks the user if he/she would  like to input his/her own email/sms example to have the program predict
+2) the program then asks the user if he/she would  like to input his/her own email/sms example to have the program predict using "naive-bayes" algorithm which predicts whether or not it is spam.
 3) the program repeats this process, outputting the prediction after each user input until "no" is answered
 
 Other files:
 - Naive-bayes-diabetes.py is the implementation of naive bayes for the dataset "pima-indians-diabetes.csv"
+- report is located in the word document.
+
